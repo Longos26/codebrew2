@@ -1,8 +1,4 @@
 // src\app\api\users\route.js
-export const dynamic = "force-static"; // Force static generation
-export const revalidate = 60; // Revalidate every 60 seconds (if needed)
-
-
 import { User } from "@/models/User";
 import mongoose from "mongoose";
 import bcrypt from "bcrypt";

@@ -1,4 +1,8 @@
 // src\app\api\profile
+export const dynamic = "force-static"; // Force static generation
+export const revalidate = 60; // Revalidate every 60 seconds (if needed)
+
+
 import { authOptions } from "@/libs/authOptions";
 import { User } from "@/models/User";
 import { UserInfo } from "@/models/UserInfo";

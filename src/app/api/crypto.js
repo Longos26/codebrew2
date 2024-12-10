@@ -1,4 +1,7 @@
 // pages/api/crypto.js
+export const dynamic = "force-static"; // Force static generation
+export const revalidate = 60; // Revalidate every 60 seconds (if needed)
+
 import { encrypt, decrypt } from '../../utils/crypto';
 
 export default function handler(req, res) {

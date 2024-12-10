@@ -1,3 +1,7 @@
+export const dynamic = "force-static"; // Force static generation
+export const revalidate = 60; // Revalidate every 60 seconds (if needed)
+
+
 import Receipt from "@/models/Receipt";
 import mongoose from "mongoose";
 

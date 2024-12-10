@@ -1,4 +1,6 @@
+
 'use client';
+
 import DeleteButton from "@/components/DeleteButton";
 import Left from "@/components/icons/Left";
 //import EditableImage from "@/components/layout/EditableImage";

@@ -1,4 +1,8 @@
 // src/app/api/modal/route.js
+export const dynamic = "force-static"; // Force static generation
+export const revalidate = 60; // Revalidate every 60 seconds (if needed)
+
+
 import { User } from "@/models/User";
 import { UserInfo } from "@/models/UserInfo";
 import mongoose from "mongoose";

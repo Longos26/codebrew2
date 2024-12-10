@@ -1,4 +1,8 @@
 // src\app\api\menu-items\route.js
+export const dynamic = "force-static"; // Force static generation
+export const revalidate = 60; // Revalidate every 60 seconds (if needed)
+
+
 import mongoose from "mongoose";
 import { isAdmin } from "@/libs/userService";
 import { MenuItem } from "@/models/MenuItem";

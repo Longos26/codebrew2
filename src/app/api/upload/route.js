@@ -1,3 +1,7 @@
+export const dynamic = "force-static"; // Force static generation
+export const revalidate = 60; // Revalidate every 60 seconds (if needed)
+
+
 import { PutObjectCommand, S3Client } from "@aws-sdk/client-s3";
 import uniqid from "uniqid";
 

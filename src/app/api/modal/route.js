@@ -2,9 +2,6 @@
 import { User } from "@/models/User";
 import { UserInfo } from "@/models/UserInfo";
 import mongoose from "mongoose";
-import dynamic from 'next/dynamic';
-
-const ModalComponent = dynamic(() => import('../api/modal'));
 
 // Function to connect to MongoDB
 async function connectToDatabase() {

@@ -1,9 +1,11 @@
 // src\app\api\categories\route.js
-import dynamic from 'next/dynamic';
+
+export const dynamic = "force-static"; // Force static generation
+export const revalidate = 60; // Revalidate every 60 seconds (if needed)
+
+
 import { Category } from "@/models/Category";
 import mongoose from "mongoose";
-
-const CategoriesComponent = dynamic(() => import('../api/categories'));
 
 async function connectDB() {
   if (!mongoose.connection.readyState) {

@@ -4,9 +4,7 @@ import { User } from "@/models/User";
 import { UserInfo } from "@/models/UserInfo";
 import mongoose from "mongoose";
 import { getServerSession } from "next-auth";
-import dynamic from 'next/dynamic';
 
-const ProfileComponent = dynamic(() => import('../api/profile'));
 // Function to connect to MongoDB
 async function connectToDatabase() {
   if (mongoose.connection.readyState === 0) {

@@ -1,9 +1,6 @@
 
 import Receipt from "@/models/Receipt";
 import mongoose from "mongoose";
-import dynamic from 'next/dynamic';
-
-const SalesComponent = dynamic(() => import('../api/sales'));
 
 async function connectDB() {
   if (!mongoose.connection.readyState) {

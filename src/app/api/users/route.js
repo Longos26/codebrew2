@@ -2,9 +2,7 @@
 import { User } from "@/models/User";
 import mongoose from "mongoose";
 import bcrypt from "bcrypt";
-import dynamic from 'next/dynamic';
 
-const UsersComponent = dynamic(() => import('../api/users'));
 // Connect to MongoDB
 async function connectToDatabase() {
   if (mongoose.connection.readyState === 0) {

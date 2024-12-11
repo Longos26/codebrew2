@@ -2,9 +2,7 @@
 import mongoose from "mongoose";
 import { isAdmin } from "@/libs/userService";
 import { MenuItem } from "@/models/MenuItem";
-import dynamic from 'next/dynamic';
 
-const MenuItemsComponent = dynamic(() => import('../api/menu-items'));
 
 async function connectDB() {
   if (!mongoose.connection.readyState) {

@@ -2,10 +2,6 @@
 import { User } from "@/models/User";
 import mongoose from "mongoose";
 import bcrypt from 'bcrypt';
-import dynamic from 'next/dynamic';
-
-const RegisterComponent = dynamic(() => import('../api/register'));
-
 
 async function connectDB() {
     if (!mongoose.connection.readyState) {

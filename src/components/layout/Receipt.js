@@ -1,13 +1,10 @@
-//Print dito Receipt.js
 'use client';
 import React from 'react';
 import Image from 'next/image';
-import {cartProductPrice} from "@/components/AppContext";
+import { cartProductPrice } from "@/components/AppContext";
 
-
-
-const Receipt = ({ customer = {}, cartProducts = [], subtotal = 0, createdAt }) => {
-  const { staffname } = customer; 
+const Receipt = ({ customer = {}, cartProducts = [], subtotal = 0, createdAt, change = 0 }) => {
+  const { staffname } = customer;
 
   return (
     <div id="receipt" className="p-6 bg-white shadow-lg rounded-lg">
@@ -47,10 +44,10 @@ const Receipt = ({ customer = {}, cartProducts = [], subtotal = 0, createdAt }) 
           )}
         </div>
 
-        
-        {/* Subtotal and Total */}
+        {/* Subtotal and Change */}
         <div className="mt-4 text-right">
-          <p><strong>Total:</strong> ₱{subtotal.toFixed(2)}</p>
+          <p><strong>Total:</strong> ₱{(subtotal || 0).toFixed(2)}</p>
+          <p><strong>Change:</strong> ₱{(change || 0).toFixed(2)}</p>
         </div>
       </div>
 

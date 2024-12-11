@@ -1,6 +1,10 @@
 // src\app\api\receipt\route.js
 import Receipt from "@/models/Receipt";
 import mongoose from "mongoose";
+import dynamic from 'next/dynamic';
+
+const ReceiptComponent = dynamic(() => import('../api/receipt'));
+
 
 async function connectDB() {
   if (!mongoose.connection.readyState) {

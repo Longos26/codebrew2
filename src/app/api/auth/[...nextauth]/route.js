@@ -1,10 +1,9 @@
 // [project]/src/app/api/auth/[...nextauth]/route.js
+import dynamic from 'next/dynamic';
 
 import NextAuth from "next-auth";
 import { authOptions } from "@/libs/authOptions";
-import mongoose from "mongoose";
-import db from "@/libs/db";
-
+const NextAuthComponent = dynamic(() => import('../api/auth/[...nextauth]'));
 
 
 export async function GET(req, res) {

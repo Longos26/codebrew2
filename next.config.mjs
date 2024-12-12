@@ -1,7 +1,4 @@
 const nextConfig = {
-    experimental: {
-      appDir: true, // Enables new app-based routing
-    },
     images: {
       remotePatterns: [
         {
